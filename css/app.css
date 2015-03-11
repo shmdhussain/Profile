@@ -134,7 +134,7 @@ font-weight:bold;
 @media (min-width: 1024px){
 	.proftext{ padding-left:90px; }
 	.viewscreen{display:block}
-	.item .carousel-caption{color:#333;font-weight:bold}
+	.item .carousel-caption{color:#FFF;font-weight:bold}
 	.item img{height:500px !important; width:500px !important}
 	.carousel{display:block}
 }
