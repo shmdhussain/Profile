@@ -137,4 +137,5 @@ font-weight:bold;
 	.item .carousel-caption{color:#FFF;font-weight:bold}
 	.item img{height:500px !important; width:500px !important}
 	.carousel{display:block}
+	.modal-dialog{z-index:1041}
 }
