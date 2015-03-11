@@ -79,7 +79,7 @@ font-weight:bold;
 }
 .skillcont{margin:30 30px 20 30}
 .secondarycont{margin:30 30px 20 30;border-bottom: 1px solid #2C3D59;}
-.secondarycont:nth-of-type(0), .secondarycont:nth-of-type(4){border-bottom: none;}
+.secondarycont:first-child, .secondarycont:last-child{border-bottom: none;}
 .viewscreen{display:none}
 .skillbox{
 	margin-bottom:15px;
