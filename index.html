@@ -1,0 +1,409 @@
+	<html lang="en">
+		<head>
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>My HTML File</title>
+			<link rel="stylesheet" href="css/app.css"/>
+			<link rel="stylesheet" href="lib/custom-bootstrap/custom/myCustomBootstrap1.css"/>
+			<script src="lib/jquery/jquery.min.js"></script>
+			<script src="lib/custom-bootstrap/bootstrap/js/bootstrap.js"></script>
+			<script src="lib/others/bootstrap_rating.js"></script>
+			<script src="js/app.js"></script>
+			<script type="text/javascript">
+				jQuery(function($){
+					$('.showprof button').click(function(){
+						if($(this).find('span').hasClass('glyphicon-plus')){
+							$(this).html('<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Hide Profile Photo');
+						}
+						else{
+							$(this).html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Show Profile Photo');
+						}
+					});
+				
+				});
+			
+			</script>
+		</head>
+		<body>
+			
+			
+				<!-- Modal -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			  <div class="modal-dialog">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Screen Prototype</h4>
+				  </div>
+				  <div class="modal-body">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					  <!-- Indicators -->
+					  <ol class="carousel-indicators">
+						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+					  </ol>
+
+					  <!-- Wrapper for slides -->
+					  <div class="carousel-inner" role="listbox">
+						<div class="item active">
+						  <img src="images/ATTCOM.png" alt="attcom">
+						  <div class="carousel-caption">
+							ATT.COM Desktop view
+						  </div>
+						</div>
+						<div class="item">
+						  <img src="images/mattcom.png" alt="ATT.COM Mobile view">
+						  <div class="carousel-caption">
+							ATT.COM Mobile view
+						  </div>
+						</div>
+						<div class="item">
+						  <img src="images/mattcom.png" alt="ToBR Desktop view">
+						  <div class="carousel-caption">
+							ToBR Desktop view
+						  </div>
+						</div>
+						<div class="item">
+						  <img src="images/mattcom.png" alt="ToBR Mobile view">
+						  <div class="carousel-caption">
+							ToBR Mobile view
+						  </div>
+						</div>
+						<div class="item">
+						  <img src="images/mattcom.png" alt="EOS Desktop view">
+						  <div class="carousel-caption">
+							EOS Desktop view
+						  </div>
+						</div>
+					  </div>
+
+					  <!-- Controls -->
+					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					  </a>
+					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					  </a>
+					</div>
+				  </div>
+				  
+				</div>
+			  </div>
+			</div>	
+		
+			<div class="introhead">
+			
+				
+				<div class="proftext">
+					<p class="name">Mohamed Hussain S H</p>
+					<p class="desig">UI Implementation Specialist, Technology Analyst.</p>
+					<p class="desig">Infosys Limited.</p>
+					<p class="desig"><span class="">email: </span>shmdhussain@yahoo.com</p>
+					<p class="desig"><span class="">mobile: </span>+91 9445450340</p>
+					<p class="desig">SO Profile <a class="soimg" href="http://stackoverflow.com/users/1550778/mohamed-hussain">Mohamed Hussain</a></p>
+				</div>
+				<div class="showprof">
+					<button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target="#profphoto" aria-expanded="false" aria-controls="profphoto">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Show Profile Photo
+					</button>
+				</div>
+				<div class="profphoto" id="profphoto">
+					<img src="images/hussainprof.jpg" alt="hussain profile photo"/>
+					<!-- <p class="name">Mohamed Hussain S H</p> -->
+				</div>
+				<div class="clear"></div>
+			</div>
+			
+			<div  class="contain">
+
+				<section class="gensec">
+					<div class="bar">
+						Summary
+					</div>
+					
+					<div class="secont">
+						<ul class="selist">
+							<li class="setext">4.8 years of experience in web page development targeting all the devices from Mobiles to Desktop using Responsive Web design (RWD) Mobile First Approach.</li>
+							<li class="setext">Working in AngularJS Client Side MVC Architecture Application.</li>
+							<li class="setext">Experience in developing  rich User Experience sites using latest UI Technologies like AngularJS HTML5/CSS3, JQuery, Twitter Bootstrap CSS Framework, LESS, AJAX,and JavaScript, </li>
+							<li class="setext">Worked in making the site Web Accessibility Compliant for physically challenged users using tools like NVDA screen reader, Web Accessibility Tool and FireEyes</li>
+							<li class="setext">Experience in developing the web pages for mobiles and desktop and fixing the device specific defects in mobiles using tools.</li>
+							<li class="setext">Automated the repeated tasks using Node JS Module GRUNT, BOWER and used tools like WEINRE to debug the defects in mobiles.</li>
+							<li class="setext">Reduced the loading time of website using front end performance tuning of JavaScript, CSS and Images using image sprite technique and tested using tools like HTTPS watch, Fiddler.</li>
+							<li class="setext">Worked on projects in waterfall and agile methodology.</li>
+							<li class="setext">Rich experience in Telecommunication domain.</li>
+							<li class="setext">Experience in working with multiple vendors and geographically distributed teams.</li>
+						</ul>
+					</div>
+					
+				</section>
+				
+				<section class="gensec">
+					<div class="bar">
+						 Technical Skills
+					</div>
+					
+					<div class="secont">
+						<div class="sesub">
+							UI Technologies Worked
+						</div>
+						<div class="skillcont">
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-sm-12 skillboxcont">
+										<div class="row ">
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>Javascript</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:4.8/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>HTML 5</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:4/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>CSS 3</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:4/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>jQuery</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:3/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>Twitter Bootstrap</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:2/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>AngularJS</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:2/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>AJAX</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:4/4.8 Months</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>OOJS</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="2"></p>
+													<p>Years of Exp:2 Months</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>LESS, Modernizr, RespondJS</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:3/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>NodeJS</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="3"></p>
+													<p>Years of Exp:.6/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>Grunt, WEINRE, Bower, Yeoman</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:2/4.8</p>
+												</div>
+											</div>
+											<div class="col-sm-6 col-md-3   skillbox">
+												<div class="inn">
+													<p>Basics of Sencha and EXTJS</p>
+													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="2"></p>
+													<p>Years of Exp:2 Months</p>
+												</div>
+											</div>
+											
+										</div>
+									
+									</div>
+
+								</div>
+							</div>
+						</div>
+						
+						<div class="sesub">
+							 Backend Technolgies
+						</div>
+						<div class="secont">
+							<ul class="selist">
+								<li class="setext">Java, J2EE, SQL, C, MongoDB, Struts1.2.</li>
+							</ul>
+						</div>
+						
+						<div class="sesub">
+							Softwares worked
+						</div>
+						<div class="secont">
+							<ul class="selist">
+								<li class="setext">GIT, IE8, IE9, IE10, IE11, Chrome, Firefox, Safari, Mobile Safari, Android emulators, XCODE Emulator, Windows Phone Emulator, NotePad++, KEYNOTE MITE, SVN, Device Connect</li>
+							</ul>
+						</div>
+					</div>
+					
+				</section>
+				<section class="gensec">
+					<div class="bar">
+						Work Experience
+					</div>
+					
+					<div class="secont">
+						<div class="sesub">
+							Total Experience
+						</div>
+						<div class="skillcont">
+							<p class="setext"><b>4.8 Years</b> of Experience in <b>Infosys Limited</b> during the period June 2010 to till date</p>
+						</div>
+					</div>
+					
+					
+					<div class="secont">
+						<div class="sesub">
+							Projects Worked
+						</div>
+						
+						<div class="secondarycont">
+							<!-- Button trigger modal -->
+							<a href="#myModal"  class="setext viewscreen " data-toggle="modal">
+							  View screen Prototype
+							</a>
+						</div>
+						
+						
+						
+						<ul class="secondarycont">
+							<li class="setext">Project Title: OLAM – Online Account Management or www.att.com </li>
+							<li class="setext">Desktop view: <a href="http://www.att.com/">www.att.com</a></li>
+							<li class="setext">Mobile view: <a href="https://m.att.com/myatt/#/">m.att.com/myatt</a></li>
+							<li class="setext">Client: AT&amp;T</li>
+							<li class="setext">Duration:  From March, 2011 to till date</li>
+							<li class="setext">Description:  Online Account Management (OLAM) involves development of a web application for customers who can 
+view, analyze, manage and pay bills for different services provided by the 
+company. The application is supported in Desktop as well as Mobile devices using Mobile First Responsive Web Design approach using Twitter Bootstrap, currenly the transtion process from 
+conventional desktop to RWD website is going on.
+
+<br/>
+<br/>
+This development project involving requirements(wireframes)/User stories gathering , design and convert the wireframes into actual HTML screens covering all 
+the devices ranging from desktop to mobile. The project is implemented in agile methodology.
+
+						</li>
+						</ul>
+						<ul class="secondarycont">
+							<li class="setext">Project Title: EOS – Enable Order Status</li>
+							<li class="setext">Desktop view: <a href="https://www.att.com/eos/unauth/eosLogin?productType=wireline">www.att.com/eos/unauth/eosLogin?productType=wireline</a></li>
+							<li class="setext">Mobile view: <a href="https://m.att.com/checkorder/#/">m.att.com/checkorder/#/</a></li>
+							<li class="setext">Client: AT&amp;T</li>
+							<li class="setext">Description:This application is one of the sub module in att.com which enables the customers to track their orders
+						</li>
+						</ul>
+						
+						
+						<ul class="secondarycont">
+							<li class="setext">Project Title: ToBR – Transfer of Billing Responsibility</li>
+							<li class="setext">RWD Site: <a href="https://www.att.com/tobr/tobrHomePage.rt">https://www.att.com/tobr/tobrHomePage.rt</a></li>
+							<li class="setext">Client: AT&amp;T</li>
+							<li class="setext">Description:This application is one of the sub module in att.com which enables the customers to transfer the billing responsibilty to another account
+						</li>
+						</ul>
+						
+						<ul class="secondarycont">
+							<li class="setext">Project Title: Consumer Insights Platform ( Internal to AT&amp;T)</li>
+							<li class="setext">Client: AT&amp;T</li>
+							<li class="setext">Description: This application is on Big data, collected to find out the customers's preferences and to provide the services of their interest.
+						</li>
+						</ul>
+					
+						<div class="sesub">
+							Roles and Responsibility
+						</div>
+						<ul class="secondarycont">
+							<li class="setext">Development of Application in client side MVC pattern using AngularJS.</li>
+							<li class="setext">Developed Web Pages for all the devices using Responsive Web Design(RWD)’s Mobile First approach using HTML5/CSS3.</li>
+							<li class="setext">Developed Pages using Twitter Bootstrap and customized Twitter bootstrap for the project requirement using LESS.</li>
+							<li class="setext">Design and implement the UI widgets like carousel, tabs etc. using jQuery and JavaScript.</li>
+							<li class="setext">Developed the Web pages with Web Accessibility complaint for physically challenged users using tools like NVDA screen readers, Web Accessibility Tool Fire Eyes add on and Voice over functionality in iPhone and android platforms.</li>
+							<li class="setext">Analysis of Requirement Wireframes/User stories and Development of HTML Page</li>
+							<li class="setext">Development of Web Page With Rich UI Experience using cutting edge front End Technologies</li>
+							<li class="setext">Unit Testing of Developed web page in all the devices ranging from all the mobile, tablets and desktop using real mobile devices and using emulators.</li>
+							<li class="setext">Provided solution for the complex Cross Device/ Cross Browser defects and able to find out the issue is with the device specific or in coding.</li>
+							<li class="setext">Setting up of Test Lab with emulators of different platform (Android iOS XCode, Windows Phone official emulator) for testing the web page in all the devices </li>
+							<li class="setext">Performed the Front End Code Tuning (in CSS and JavaScript and image sprites) of Website to reduce the loading time using HTTPS WATCH.</li>
+							<li class="setext">Automated repeated tasks like Minification, Compression etc... using GRUNT Bower, a NodeJS modules.</li>
+							<li class="setext">Sets up WEINRE, a remote Web Inspector to analyze the pages in Mobile Devices.</li>
+							<li class="setext">Architecting the UI for the new projects starting from the scratch.</li>
+							<li class="setext">Coordinated with multiple vendors from geographically distributed teams for a successful development, testing and deployment of a single project</li>
+							<li class="setext">Additional responsibilities as KM anchor for the project and periodically share the latest trends in UI with the team.</li>
+						</ul>
+
+					</div>
+					
+				</section>
+
+				
+				
+				<section class="gensec">
+					<div class="bar">
+						Academic Qualification
+					</div>
+					
+					<div class="secont">
+						<ul class="selist">
+							<li class="setext">Bachelor of Engineering in Electronics and Communication in 2010 from ANNA University, Chennai, Tamil Nadu, India. And secured <b>81% First Class with Distinction</b>.</li>
+							<li class="setext">Higher secondary (Std XII) completed in 2006 and secured <b>90.8%</b></li>
+						</ul>
+					</div>
+					
+				</section>
+
+				
+				<section class="gensec">
+					<div class="bar">
+						Certifications or Professional Awards
+					</div>
+					
+					<div class="secont">
+						<ul class="selist">
+							<li class="setext">
+							
+								Microsoft Certified Professional in <b>“Programming in HTML5 with JavaScript and CSS3”</b>
+								<div class="mcp"></div>
+							
+							</li>
+						</ul>
+					</div>
+					
+				</section>
+
+			</div>
+			
+			
+
+		</body>
+	</html>
