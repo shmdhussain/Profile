@@ -95,6 +95,7 @@ font-weight:bold;
 .skillbox p{text-align:center;font-family:DokChampa;font-weight:bold}
 .skillbox .inn:hover{background:#E3ECF5}
 .carousel{display:none}
+.item .carousel-caption .cb {color:#333}
 @media (min-width: 550px){
 	.proftext .name{font-size:40px}
 	.proftext .desig{font-size:20px;margin:0;}
