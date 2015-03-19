@@ -10,7 +10,17 @@
 			<script src="lib/others/bootstrap_rating.js"></script>
 			<script src="js/app.js"></script>
 			<script type="text/javascript">
+				jQuery(function($){
+					$('.showprof button').click(function(){
+						if($(this).find('span').hasClass('glyphicon-plus')){
+							$(this).html('<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Hide Profile Photo');
+						}
+						else{
+							$(this).html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Show Profile Photo');
+						}
+					});
 				
+				});
 			
 			</script>
 		</head>
@@ -38,7 +48,7 @@
 					  <div class="carousel-inner" role="listbox">
 						<div class="item active">
 						  <img src="images/ATTCOM.png" alt="attcom">
-						  <div class="carousel-caption cb">
+						  <div class="carousel-caption">
 							ATT.COM Desktop view
 						  </div>
 						</div>
@@ -50,7 +60,7 @@
 						</div>
 						<div class="item">
 						  <img src="images/tobr.png" alt="ToBR Desktop view">
-						  <div class="carousel-caption cb">
+						  <div class="carousel-caption">
 							ToBR Desktop view
 						  </div>
 						</div>
@@ -62,12 +72,11 @@
 						</div>
 						<div class="item">
 						  <img src="images/EOS_Wireless.jpg" alt="EOS Desktop view">
-						  <div class="carousel-caption cb">
+						  <div class="carousel-caption">
 							EOS Desktop view
 						  </div>
 						</div>
 						<div class="item">
-
 						  <img src="images/meos.png" alt="EOS Mobile view">
 						  <div class="carousel-caption cb">
 							EOS Mobile view
@@ -211,7 +220,7 @@
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
-													<p>AJAX, JSON</p>
+													<p>AJAX</p>
 													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
 													<p>Years of Exp:4/4.8 Months</p>
 												</div>
@@ -234,7 +243,7 @@
 												<div class="inn">
 													<p>NodeJS</p>
 													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="3"></p>
-													<p>Years of Exp:6 Months</p>
+													<p>Years of Exp:.6/4.8</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
@@ -269,22 +278,12 @@
 							</ul>
 						</div>
 						
-
 						<div class="sesub">
 							Softwares worked
 						</div>
 						<div class="secont">
 							<ul class="selist">
 								<li class="setext">GIT, IE8, IE9, IE10, IE11, Chrome, Firefox, Safari, Mobile Safari, Android emulators, XCODE Emulator, Windows Phone Emulator, NotePad++, KEYNOTE MITE, SVN, Device Connect</li>
-							</ul>
-						</div>
-						
-						<div class="sesub">
-							Platforms and Devices Worked
-						</div>
-						<div class="secont">
-							<ul class="selist">
-								<li class="setext">Windows Server, Mac OS X Machine, iPhone 5S ,Samsung Galaxy SII, III IV V, iPad ,Galaxy Tab, Blackberry Z10, Lumia 1320</li>
 							</ul>
 						</div>
 					</div>
