@@ -155,6 +155,8 @@ font-weight:bold;
 	.viewscreen{display:block}
 	.item .carousel-caption{color:#FFF;font-weight:bold}
 	.item img{height:500px !important; width:500px !important}
+	.item.mob img{height:500px !important; width:200px !important;text-align:center;margin:0 auto}
+	.item.mob.cip img{height:500px !important; width:150px !important;text-align:center;margin:0 auto}
 	.carousel{display:block}
 	.modal-dialog{z-index:1041}
 }
