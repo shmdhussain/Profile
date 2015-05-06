@@ -81,6 +81,7 @@ font-weight:bold;
 .selist{padding-left:10px}
 .mcp{width:250px;height:250px;background:url("../images/Special_ProgHTML5_Blk.png") no-repeat scroll left top transparent;background-size:contain;}
 .soimg{background:url("../images/so.jpg") no-repeat scroll left top transparent;padding-left:30px;background-size:contain;}
+.gitimg{background:url("../images/git.png") no-repeat scroll left top transparent;padding-left:30px;background-size:contain;}
 .sesub{
 	box-shadow: 5px 5px 5px #aaa;
 	background:#2C3D59;
