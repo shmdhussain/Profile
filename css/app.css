@@ -76,12 +76,12 @@ font-weight:bold;
 .gensec{
 	padding:50 0 0;
 }
-.secont{margin:40 0 0 70}
-.setext{padding:0 0 20 0;font-size:18px}
+.secont{margin:40 0 0 30;}
+.setext{padding:0 0 20 0;font-size:14px;font-weight:bold}
 .selist{padding-left:10px}
 .mcp{width:250px;height:250px;background:url("../images/Special_ProgHTML5_Blk.png") no-repeat scroll left top transparent;background-size:contain;}
-.soimg{background:url("../images/so.jpg") no-repeat scroll left top transparent;padding-left:30px;background-size:contain;margin-left:50px}
-.gitimg{background:url("../images/git.png") no-repeat scroll left top transparent;padding-left:37px;background-size:contain;}
+.soimg{background:url("../images/so.jpg") no-repeat scroll left top transparent;padding-left:30px;background-size:contain;margin-left:0px;display:block}
+.gitimg{background:url("../images/git.png") no-repeat scroll left top transparent;padding-left:37px;background-size:contain;display:block}
 .pT7{padding-top:7px}
 .sesub{
 	box-shadow: 5px 5px 5px #aaa;
@@ -96,7 +96,8 @@ font-weight:bold;
 
 }
 .skillcont{margin:30 30px 20 30}
-.secondarycont{margin:30 30px 20 30;border-bottom: 1px solid #2C3D59;}
+.secondarycont{margin: 30px 10px 20 0px;border-bottom: 1px solid #2C3D59;}
+
 .secondarycont:first-child, .secondarycont:last-child{border-bottom: none;}
 .viewscreen{display:none}
 .skillbox{
@@ -116,14 +117,26 @@ font-weight:bold;
 .skillbox .inn:hover{background:#E3ECF5}
 .carousel{display:none}
 .item .carousel-caption .cb {color:#333}
+
+.expertise span{display:block}
+.secondarycont{padding-left:25px}
+.carousel-indicators{display:none}
+@media (min-width: 410px){
+	.expertise span{display:inline}
+}
 @media (min-width: 550px){
 	.proftext .name{font-size:40px}
 	.proftext .desig{font-size:20px;margin:0;}
 	.bar{padding-left:40px;font-size:18px}
 	.sesub{font-size:14px;width:250px}
-	
+	.secondarycont{margin:30 30px 20 30}
 }
 @media (min-width: 768px){
+	.secont{margin:40 0 0 70}
+	.soimg{margin-left:50px;display:inline}
+	.gitimg{display:inline}
+	.setext{font-size:18px;font-weight:normal}
+	.secondarycont{padding-left:40px}
 }
 @media (min-width: 820px){
 	.profphoto{
@@ -156,7 +169,11 @@ font-weight:bold;
 	.proftext{ padding-left:90px; }
 	.viewscreen{display:block}
 	.item .carousel-caption{color:#FFF;font-weight:bold}
-	.item img{height:500px !important; width:500px !important}
+	.item img{height:500px !important; width:500px !important;}
+	.carIn{text-align:center}
+	.item .mobcar img{height:500px !important; width:300px !important;border-left:1px solid #c3c3c3;border-right:1px solid #c3c3c3}
 	.carousel{display:block}
+	.carcaption{text-align:center;font-size:18px; color:#2C3D59;padding:15px}
 	.modal-dialog{z-index:1041}
+	
 }

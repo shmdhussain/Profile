@@ -9,20 +9,7 @@
 			<script src="lib/custom-bootstrap/bootstrap/js/bootstrap.js"></script>
 			<script src="lib/others/bootstrap_rating.js"></script>
 			<script src="js/app.js"></script>
-			<script type="text/javascript">
-				jQuery(function($){
-					$('.showprof button').click(function(){
-						if($(this).find('span').hasClass('glyphicon-plus')){
-							$(this).html('<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Hide Profile Photo');
-						}
-						else{
-							$(this).html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Show Profile Photo');
-						}
-					});
-				
-				});
 			
-			</script>
 		</head>
 		<body>
 			
@@ -33,10 +20,10 @@
 				<div class="modal-content">
 				  <div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Screen Prototype</h4>
+					<h4 class="modal-title" id="myModalLabel">View Screen Prototype I Worked</h4>
 				  </div>
 				  <div class="modal-body">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+					<div id="carousel-example-generic" class="carousel slide" data-interval="false" data-ride="carousel">
 					  <!-- Indicators -->
 					  <ol class="carousel-indicators">
 						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
@@ -47,58 +34,101 @@
 					  <!-- Wrapper for slides -->
 					  <div class="carousel-inner" role="listbox">
 						<div class="item active">
-						  <img src="images/ATTCOM.png" alt="attcom">
-						  <div class="carousel-caption">
-							ATT.COM Desktop view
+						  <div class="carIn">
+							<p class="carcaption"><a target="_blank" href="https://www.att.com/">ATT.COM</a> Desktop view</p>
+						    <img src="images/ATTCOM.png" alt="attcom">
 						  </div>
 						</div>
 						<div class="item">
-						  <img src="images/mattcom.png" alt="ATT.COM Mobile view">
-						  <div class="carousel-caption">
-							ATT.COM Mobile view
+						  <div class="mobcar carIn">
+							<p class="carcaption"><a target="_blank" href="https://m.att.com">ATT.COM</a> Mobile view </p>
+							<img src="images/mattcom.png" alt="ATT.COM Mobile view"/>
+						  </div>
+						  
+						</div>
+						<div class="item">
+						   <div class="carIn">
+							 <p class="carcaption"><a target="_blank" href="https://www.att.com/tobr/tobrHomePage.rt">ToBR</a> Desktop view (resize Browser window to see RWD)</p>
+						     <img src="images/tobr.png" alt="ToBR Desktop view">
 						  </div>
 						</div>
 						<div class="item">
-						  <img src="images/tobr.png" alt="ToBR Desktop view">
-						  <div class="carousel-caption">
-							ToBR Desktop view
+						 <div class="mobcar carIn">
+							<p class="carcaption"><a target="_blank" href="https://www.att.com/tobr/tobrHomePage.rt">ToBR</a> Mobile view (resize Browser window to see RWD)</p>
+						    <img src="images/mtobr.png" alt="ToBR Mobile view">
+						 </div>
+						</div>
+						<div class="item">
+						  <div class="carIn">
+							<p class="carcaption"><a target="_blank" href="https://www.att.com/eos/unauth/eosLogin">EOS</a> Desktop view</p>
+						    <img src="images/EOS_Wireless.jpg" alt="EOS Desktop view">
 						  </div>
 						</div>
 						<div class="item">
-						  <img src="images/mtobr.png" alt="ToBR Mobile view">
-						  <div class="carousel-caption">
-							ToBR Mobile view
+						  <div class="mobcar carIn">
+							<p class="carcaption"><a target="_blank" href="https://m.att.com/checkorder/#/">EOS</a> Mobile view(Change browser to mobile UA)</p>
+						    <img src="images/meos.png" alt="EOS Mobile view">
 						  </div>
 						</div>
 						<div class="item">
-						  <img src="images/EOS_Wireless.jpg" alt="EOS Desktop view">
-						  <div class="carousel-caption">
-							EOS Desktop view
-						  </div>
+							<div class="carIn">
+							   <p class="carcaption">CIP Desktop view</p>
+						       <img src="images/CIP-DS.jpg" alt="CIP Desktop view">
+						    </div>
 						</div>
 						<div class="item">
-						  <img src="images/meos.png" alt="EOS Mobile view">
-						  <div class="carousel-caption cb">
-							EOS Mobile view
-						  </div>
+						  <div class="carIn">
+							   <p class="carcaption">CIP Tablet view</p>
+						       <img src="images/cip-tb.jpg" alt="CIP Tablet view">
+						    </div>
 						</div>
 						<div class="item">
-						  <img src="images/CIP-DS.jpg" alt="CIP Desktop view">
-						  <div class="carousel-caption">
-							CIP Desktop view
-						  </div>
+						  <div class="mobcar carIn">
+							   <p class="carcaption">CIP Mobile view</p>
+						        <img src="images/cip-Mb.jpg" alt="CIP Mobile view">
+						    </div>
 						</div>
 						<div class="item">
-						  <img src="images/cip-tb.jpg" alt="CIP Tablet view">
-						  <div class="carousel-caption">
-							CIP Tablet view
-						  </div>
+						  <div class="carIn">
+							    <p class="carcaption"><a target="_blank" href="http://shmdhussain.github.io/BookReadies/">BookReadies</a> Desktop view 1(resize Browser window to see RWD)
+						        <br/>Internal Work</p>
+								<img src="images/book-des-1.png" alt="BookReadies Desktop view">
+						    </div>
 						</div>
 						<div class="item">
-						  <img src="images/cip-Mb.jpg" alt="CIP Mobile view">
-						  <div class="carousel-caption">
-							CIP Mobile view
-						  </div>
+						  <div class="carIn">
+							    <p class="carcaption"><a target="_blank" href="http://shmdhussain.github.io/BookReadies/">BookReadies</a> Desktop view 2(resize Browser window to see RWD)
+						        <br/>Internal Work</p>
+								<img src="images/book-des-2.png" alt="BookReadies Desktop view">
+						    </div>
+						</div>
+						<div class="item">
+						  <div class="mobcar carIn">
+							    <p class="carcaption"><a target="_blank" href="http://shmdhussain.github.io/BookReadies/">BookReadies</a> Mobile view 1(resize Browser window to see RWD)
+						        <br/>Internal Work</p>
+								<img src="images/book-mob-1.png" alt="BookReadies Mobile view">
+						    </div>
+						</div>
+						<div class="item">
+						  <div class="mobcar carIn">
+							    <p class="carcaption"><a target="_blank" href="http://shmdhussain.github.io/BookReadies/">BookReadies</a> Mobile view 2(resize Browser window to see RWD)
+							    <br/>Internal Work</p>
+						        <img src="images/book-mob-2.png" alt="BookReadies Mobile view">
+						    </div>
+						</div>
+						<div class="item">
+						  <div class="mobcar carIn">
+							    <p class="carcaption"><a target="_blank" href="http://shmdhussain.github.io/Profile/">Profile</a> Desktop view 2(resize Browser window to see RWD)
+							    <br/>Profile site</p>
+						        <img src="images/prof-des-1.png" alt="BookReadies Mobile view">
+						    </div>
+						</div>
+						<div class="item">
+						  <div class="mobcar carIn">
+							    <p class="carcaption"><a target="_blank" href="http://shmdhussain.github.io/Profile/">Profile</a> Mobile view 2(resize Browser window to see RWD)
+							    <br/>Profile site</p>
+						        <img src="images/prof-mob-1.png" alt="BookReadies Mobile view">
+						    </div>
 						</div>
 					  </div>
 
@@ -123,10 +153,11 @@
 				
 				<div class="proftext">
 					<p class="name">Mohamed Hussain S H</p>
-					<p class="desig">UI Implementation Specialist, Technology Analyst.</p>
+					<p class="desig">Senior Front End UI Developer, Technology Analyst.</p>
 					<p class="desig">Infosys Limited.</p>
 					<p class="desig"><span class="">email: </span><a href="mailto:shmdhussain@yahoo.com">shmdhussain15@gmail.com</a></p>
-					<p class="desig"><span class="">mobile: </span>+91 9894211216</p>
+					<p class="desig"><span class="">mobile: </span>0091 9894211216</p>
+					<p class="desig">Profile Site: <a class="" target="_blank" href="http://shmdhussain.github.io/Profile/">http://shmdhussain.github.io/Profile/</a></p>
 					<p class="desig">SO Profile: <a class="soimg" target="_blank" href="http://stackoverflow.com/users/1550778/mohamed-hussain">Mohamed Hussain</a></p>
 					<p class="desig pT7">GitHub Profile: <a class="gitimg" target="_blank"  href="https://github.com/shmdhussain">Mohamed Hussain</a></p>
 				</div>
@@ -151,15 +182,17 @@
 					
 					<div class="secont">
 						<ul class="selist">
-							<li class="setext">5 years of experience in Mobile and Desktop UI web page development targeting all the devices using Responsive Web design (RWD) Mobile First Approach.</li>
+							<li class="setext"><span data-startdate="June, 2010"></span> years of experience in Mobile and Desktop UI web page development targeting all the devices using Responsive Web design (RWD) Mobile First Approach.</li>
+							<li class="setext">Experience in developing  rich User Experience sites using latest UI Technologies like AngularJS HTML5/CSS3, JQuery, Twitter Bootstrap CSS Framework, LESS, AJAX,and JavaScript and expert in providing browser support from IE8+.</li>
+							<li class="setext">Excellent Experience in developing the Rich UI HTML pages from the PSD and mockup design images</li>
 							<li class="setext">Working in AngularJS Client Side MVC Architecture Application.</li>
-							<li class="setext">Experience in developing  rich User Experience sites using latest UI Technologies like AngularJS HTML5/CSS3, JQuery, Twitter Bootstrap CSS Framework, LESS, AJAX,and JavaScript, </li>
-							<li class="setext">Worked in making the site Web Accessibility Compliant for physically challenged users using tools like NVDA screen reader, Web Accessibility Tool and FireEyes</li>
-							<li class="setext">Experience in developing the web pages for mobiles and desktop and fixing the device specific defects in mobiles using tools.</li>
+							<li class="setext">Experience in making the site Web Accessibility Compliant for differently abled users using tools like NVDA screen reader, Web Accessibility Tool and FireEyes</li>
+							<li class="setext">Experience in developing the web pages for mobiles and desktop and fixing the browser specific device specific defects in mobiles using tools and good in cross browser compatible page development and good in using browser development tools</li>
 							<li class="setext">Automated the repeated tasks using Node JS Module GRUNT, BOWER and used tools like WEINRE to debug the defects in mobiles.</li>
-							<li class="setext">Reduced the loading time of website using front end performance tuning of JavaScript, CSS and Images using image sprite technique and tested using tools like HTTPS watch, Fiddler.</li>
+							<li class="setext">Reduced the loading time of website using front end performance Compressing and minifying JS and CSS using YUI and UglifyJS ,tuning of JavaScript, CSS and Images using image sprite technique and tested using tools like HTTPS watch, Fiddler.</li>
 							<li class="setext">Worked on projects in waterfall and agile methodology.</li>
 							<li class="setext">Rich experience in Telecommunication domain.</li>
+							<li class="setext">Experience in working GIT and SVN version control environment</li>
 							<li class="setext">Experience in working with multiple vendors and geographically distributed teams.</li>
 						</ul>
 					</div>
@@ -183,91 +216,91 @@
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>Mobile UI</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:<span data-startdate="June, 2011"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>Javascript</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4.8/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:<span data-startdate="June, 2010"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>HTML 5</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:<span data-startdate="June, 2011"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>CSS 3</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:<span data-startdate="June, 2011"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>jQuery</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:3/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:<span data-startdate="March, 2011"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>Twitter Bootstrap</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:2/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:<span data-startdate="November, 2012"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>AngularJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:2/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:<span data-startdate="November, 2012"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>AJAX</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/5 Months</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="5"></p>
+													<p>Years of Exp:<span data-startdate="June, 2011"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>OOJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="2"></p>
-													<p>Years of Exp:2 Months</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="2"></p>
+													<p>Years of Exp:<span data-startdate="january, 2014"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>LESS, Modernizr, RespondJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:3/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:<span data-startdate="June, 2012"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>NodeJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="3"></p>
-													<p>Years of Exp:.6/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="3"></p>
+													<p>Years of Exp:<span data-startdate="december, 2014"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>Grunt, WEINRE, Bower, Yeoman</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:2/5</p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="4"></p>
+													<p>Years of Exp:<span data-startdate="June, 2013"></span> Years</p>
 												</div>
 											</div>
 											<div class="col-sm-6 col-md-3   skillbox">
 												<div class="inn">
 													<p>Basics of Sencha and EXTJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="2"></p>
+													<p class="expertise">Expertise: <input type="hidden" class="rating" readonly="readonly" value="2"></p>
 													<p>Years of Exp:2 Months</p>
 												</div>
 											</div>
@@ -294,7 +327,21 @@
 						</div>
 						<div class="secont">
 							<ul class="selist">
-								<li class="setext">GIT, IE8, IE9, IE10, IE11, Chrome, Firefox, Safari, Mobile Safari, Android emulators, XCODE Emulator, Windows Phone Emulator, NotePad++, KEYNOTE MITE, SVN, Device Connect</li>
+								<li class="setext">Browsers - IE8, IE9, IE10, IE11, Chrome, Firefox, Safari, Opera, Mobile Safari, Android Webkit, Android Chrome, Windows Phone IE </li>
+								<li class="setext">Emulators and Mobile Testing`- Android SDK Emulators, XCODE Emulator, Windows Phone, KEYNOTE MITE, SVN, Device Connect (testing in remote) and WEINRE</li>
+								<li class="setext">Version control systems - GIT and SVN</li>
+								<li class="setext">IDEs - NotePad++ and Eclipse</li>
+								<li class="setext">Screen Readers and Accessibility - NVDA, WAT, VoiceOver in iOs and talkback in android, screen reader in windows phone</li>
+							</ul>
+						</div>
+						
+						
+						<div class="sesub">
+							Devices worked
+						</div>
+						<div class="secont">
+							<ul class="selist">
+								<li class="setext">iPhone4,5S,6, iPad (upto iOS 8.3), Android Devices Samsung SII, S5,Galaxy Tab Windows Nokia Lumia 1320, Mac and Windows workstation, Blackberry</li>
 							</ul>
 						</div>
 					</div>
@@ -323,7 +370,7 @@
 						<div class="secondarycont">
 							<!-- Button trigger modal -->
 							<a href="#myModal"  class="setext viewscreen " data-toggle="modal">
-							  View screen Prototype
+							  Click to view Screen Prototypes Developed  
 							</a>
 						</div>
 						
