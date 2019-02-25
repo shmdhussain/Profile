@@ -1,0 +1,29 @@
+{
+  "name": "profile",
+  "version": "2.0.0",
+  "description": "profile of mohamed hussain s h, front end developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp",
+    "dev": "concurrently \"http-server -p 8080\" \"npm run gulp\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shmdhussain/Profile.git"
+  },
+  "author": "Mohamed Hussain S H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shmdhussain/Profile/issues"
+  },
+  "homepage": "https://github.com/shmdhussain/Profile#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "gulp": "^4.0.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
