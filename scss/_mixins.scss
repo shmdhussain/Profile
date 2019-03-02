@@ -66,3 +66,9 @@
   }
 }
 /*END:Aspect Ratio Mixins */
+
+/*START: Stop scss converting hsl color into hex */
+@function hsl($h, $s, $l) {
+  @return unquote('hsl(#{$h}, #{$s}, #{$l})');
+}
+/*END:  Stop scss converting hsl color into hex */
