@@ -131,6 +131,7 @@
 
 .pf_detail_section{
 	padding: 40px;
+	padding-bottom: 30px;
 	&:not(.pf_exp){
 		padding-top: 0;
 	}
@@ -231,7 +232,7 @@
 	@include item_col_width_rel(1, 3);
 	@include flex_container();
 	padding-right: 10px;
-	&:nth-child(n+3){
+	&:nth-child(n+4){
 		padding-top: 20px;	
 	};
 }
@@ -248,3 +249,44 @@
 	font-weight: 500;
 }
 /*END:Key Skillset */
+
+/*START:General Detail section With Lsit Item  Section */
+.pf_detail_list{
+	// @include flex_container();
+
+}
+.pf_detail_list_item{
+	@include flex_container();	
+}
+.pf_detail_list_item_text_icon{
+	width: 24px;
+	height: 24px;
+	fill: $svg_icon_color_1;
+    color:$svg_icon_color_2;
+    @include flex_item();
+}
+.pf_detail_list_item_text {
+    padding-left: 10px;
+}
+li.pf_detail_list_item {
+ 	&:not(:last-child){
+    	padding-bottom: 15px;
+ 	}
+}
+/*END:General Detail section With Lsit Item  Section */
+
+/*START:General Icon with Text Line */
+.pf_item_cont{
+	@include flex_container(); 
+}
+.pf_item_icon{
+	@include flex_item();
+	width: 24px;
+	height: 24px;
+	fill: $svg_icon_color_1;
+    color:$svg_icon_color_2;
+}
+.pf_item_text{
+	padding-left: 10px;
+}
+/*END:General Icon with Text Line */
