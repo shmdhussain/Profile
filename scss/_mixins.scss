@@ -72,3 +72,19 @@
   @return unquote('hsl(#{$h}, #{$s}, #{$l})');
 }
 /*END:  Stop scss converting hsl color into hex */
+
+/*START:Find lower and upper bound in the param passed as (lower_bound, uper_bound) */
+@function lower-bound($range) {
+    @if length($range) <=0 {
+        @return 0;
+    }
+    @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+    @if length($range) < 2 {
+        @return 999999999999;
+    }
+    @return nth($range, 2);
+}
+/*END:Find lower and upper bound in the param passed as (lower_bound, uper_bound) */
