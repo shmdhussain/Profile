@@ -88,3 +88,24 @@
     @return nth($range, 2);
 }
 /*END:Find lower and upper bound in the param passed as (lower_bound, uper_bound) */
+
+/*START:mixin for responsive units, that is from 100 to 200px screen size 
+        go from min to max point
+        and before min resolution(100px) that min value 
+        and after 200(maximum resolution) max value */
+@mixin responsive-unit($propName, $unit, $minVal, $maxVal, $minPoint, $maxPoint) {
+    $res-mq: "#{$screen} and (min-width:#{$minPoint}px) and (max-width:#{$maxPoint}px)";
+    $res-max-mq: "#{$screen} and (min-width:#{$maxPoint}px)";
+
+    #{$propName}: #{$minVal}px;
+    @media #{$res-max-mq} {
+        #{$propName}: #{$maxVal}px;
+    }
+    @media #{$res-mq} {
+        #{$propName}: calc( #{$minVal}px + (#{$maxVal} - #{$minVal}) * (100vw - #{$minPoint}px) / (#{$maxPoint} - #{$minPoint}));
+    }
+}
+/*END:  mixin for responsive units, that is from 100 to 200px screen size 
+        go from min to max point
+        and before min resolution(100px) that min value 
+        and after 200(maximum resolution) max value */  

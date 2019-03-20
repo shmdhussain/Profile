@@ -12,6 +12,9 @@ to be included in all the css files to be generated */
 	color:$color_neutral_10;
 	min-height: 200px;
 	padding: 40px;
+	position: -webkit-sticky;
+	position: sticky;
+	top:0;
 	
 }
 .pf_intro_i_1{
@@ -32,23 +35,42 @@ to be included in all the css files to be generated */
 }
 
 .pf_name{
-	font-size: $font_size_9;
 	font-weight: bold;
 	line-height: 1.2;
 	padding: 15px 0 0;
 	text-align: center;
+
+	@include responsive-unit("font-size", "px", str-slice(#{$font_size_6}, 1 , -3), str-slice(#{$font_size_7}, 1 , -3), 320, 640);
+	@media #{$medium-and-up} {
+		@include responsive-unit("font-size", "px", str-slice(#{$font_size_7}, 1 , -3), str-slice(#{$font_size_8}, 1 , -3), 641, 1024);
+	}
+	@media #{$large-and-up} {
+		font-size: $font_size_9;
+	}
 }
 
 .pf_pos_text{
 	font-size: $font_size_6;
 	text-align: center;
+	@media #{$small-and-down} {
+		padding-top: 5px;
+	}
+	@include responsive-unit("font-size", "px", str-slice(#{$font_size_3}, 1 , -3), str-slice(#{$font_size_4}, 1 , -3), 320, 640);
+	@media #{$medium-and-up} {
+		@include responsive-unit("font-size", "px", str-slice(#{$font_size_5}, 1 , -3), str-slice(#{$font_size_6}, 1 , -3), 641, 1024);
+	}
+	@media #{$large-and-up} {
+		font-size: $font_size_6;
+	}
 }
-
+.pf_pos_text_company_working{
+	white-space: nowrap;	
+}
 .pf_contact{
 	@include flex_container();
 	@include flex_container_wrap(wrap);
 	justify-content: center;
-	padding-top: 20px;
+	// padding-top: 20px;
 	padding-bottom: 20px;
 }
 .pf_contact_item{
@@ -58,6 +80,11 @@ to be included in all the css files to be generated */
 	justify-content: center;
 	align-items: center;
 	padding-left: 30px;
+	padding-top:  20px;
+	@media #{$small-and-down} {
+		justify-content: center;
+		min-width: 	266px;	
+	}
 }
 
 .pf_contact_item_text{
@@ -135,6 +162,10 @@ to be included in all the css files to be generated */
 
 .pf_detail_section{
 	padding: 20px 10px 0;
+
+	position: relative;
+    z-index: 1;
+    background-color: $color_neutral_10;
 	&.last{
 		padding-bottom: 20px;
 	}
@@ -163,11 +194,20 @@ to be included in all the css files to be generated */
     color: $color_neutral_2;
     font-weight: bold;
     // text-transform: uppercase;
-	font-size: $font_size_6;
     padding: 5px 0 5px 12px;
     background-color: $color_neutral_9;
     position: relative;
 	background-image: linear-gradient(45deg, #{$color_neutral_9}, rgba(255, 255, 255, 0.86));
+    
+	font-size: $font_size_4;
+	@media #{$medium-and-up} {
+		font-size: $font_size_5;
+	}
+
+	@media #{$large-and-up} {
+		font-size: $font_size_6;
+	}
+
     &::before{
 		position: absolute;
 		height: 100%;
@@ -214,6 +254,11 @@ to be included in all the css files to be generated */
     font-size: 14px;
     padding-left: 5px;
     font-weight: normal;
+    @include flex_item();
+    @media #{$small-and-down} {
+    	padding-top:5px;
+   		@include item_col_width_abs(100%);
+    }
 }
 
 .pf_comp_icon.sh_icon{
@@ -226,6 +271,7 @@ to be included in all the css files to be generated */
 }
 .pf_comp_name{
 	@include flex_container();
+	@include flex_container_wrap(wrap);
 	align-items: flex-end;
 }
 .pf_comp_name_text{
