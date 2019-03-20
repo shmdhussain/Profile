@@ -38,3 +38,7 @@ latest.dump
 
 #ignore puppeteer issue
 **/Library/Application Support/
+
+
+#ignore css file gen from scss file
+#css/**/*.css
