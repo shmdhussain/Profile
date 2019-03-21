@@ -1,441 +1,965 @@
-	<html lang="en">
-		<head>
-			<meta charset="utf-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<title>Mohamed Hussain Profile</title>
-			<link rel="stylesheet" href="css/app.css"/>
-			<link rel="stylesheet" href="lib/custom-bootstrap/custom/myCustomBootstrap1.css"/>
-			<script src="lib/jquery/jquery.min.js"></script>
-			<script src="lib/custom-bootstrap/bootstrap/js/bootstrap.js"></script>
-			<script src="lib/others/bootstrap_rating.js"></script>
-			<script src="js/app.js"></script>
-			<script type="text/javascript">
-				jQuery(function($){
-					$('.showprof button').click(function(){
-						if($(this).find('span').hasClass('glyphicon-plus')){
-							$(this).html('<span class="glyphicon glyphicon-minus" aria-hidden="true"></span> Hide Profile Photo');
-						}
-						else{
-							$(this).html('<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Show Profile Photo');
-						}
-					});
-				
-				});
-			
-			</script>
-		</head>
-		<body>
-			
-			
-				<!-- Modal -->
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-			  <div class="modal-dialog">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-					<h4 class="modal-title" id="myModalLabel">Screen Prototype</h4>
-				  </div>
-				  <div class="modal-body">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					  <!-- Indicators -->
-					  <ol class="carousel-indicators">
-						<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-						<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					  </ol>
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner" role="listbox">
-						<div class="item active">
-						  <img src="images/ATTCOM.png" alt="attcom">
-						  <div class="carousel-caption">
-							ATT.COM Desktop view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/mattcom.png" alt="ATT.COM Mobile view">
-						  <div class="carousel-caption">
-							ATT.COM Mobile view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/tobr.png" alt="ToBR Desktop view">
-						  <div class="carousel-caption">
-							ToBR Desktop view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/mtobr.png" alt="ToBR Mobile view">
-						  <div class="carousel-caption">
-							ToBR Mobile view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/EOS_Wireless.jpg" alt="EOS Desktop view">
-						  <div class="carousel-caption">
-							EOS Desktop view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/meos.png" alt="EOS Mobile view">
-						  <div class="carousel-caption cb">
-							EOS Mobile view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/CIP-DS.jpg" alt="CIP Desktop view">
-						  <div class="carousel-caption">
-							CIP Desktop view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/cip-tb.jpg" alt="CIP Tablet view">
-						  <div class="carousel-caption">
-							CIP Tablet view
-						  </div>
-						</div>
-						<div class="item">
-						  <img src="images/cip-Mb.jpg" alt="CIP Mobile view">
-						  <div class="carousel-caption">
-							CIP Mobile view
-						  </div>
-						</div>
-					  </div>
-
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-						<span class="sr-only">Previous</span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-						<span class="sr-only">Next</span>
-					  </a>
-					</div>
-				  </div>
-				  
-				</div>
-			  </div>
-			</div>	
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Profile | Mohamed Hussain S H | Front End Developer</title>
+		<link rel="stylesheet" href="css/common.css"/>
+		<link rel="stylesheet" href="css/profile.css"/>
 		
-			<div class="introhead">
-			
-				
-				<div class="proftext">
-					<p class="name">Mohamed Hussain S H</p>
-					<p class="desig">UI Implementation Specialist, Technology Analyst.</p>
-					<p class="desig">Infosys Limited.</p>
-					<p class="desig"><span class="">email: </span><a href="mailto:shmdhussain@yahoo.com">shmdhussain@yahoo.com</a></p>
-					<p class="desig"><span class="">mobile: </span>+91 9894211216</p>
-					<p class="desig">SO Profile: <a class="soimg" target="_blank" href="http://stackoverflow.com/users/1550778/mohamed-hussain">Mohamed Hussain</a></p>
-					<p class="desig pT7">GitHub Profile: <a class="gitimg" target="_blank"  href="https://github.com/shmdhussain">Mohamed Hussain</a></p>
-				</div>
-				<div class="showprof">
-					<button type="button" class="btn btn-default btn-lg" data-toggle="collapse" data-target="#profphoto" aria-expanded="false" aria-controls="profphoto">
-					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Show Profile Photo
-					</button>
-				</div>
-				<div class="profphoto" id="profphoto">
-					<img src="images/hussainprof.jpg" alt="hussain profile photo"/>
-					<!-- <p class="name">Mohamed Hussain S H</p> -->
-				</div>
-				<div class="clear"></div>
-			</div>
-			
-			<div  class="contain">
+	</head>
+	<body>
+		
 
-				<section class="gensec">
-					<div class="bar">
-						Summary
-					</div>
-					
-					<div class="secont">
-						<ul class="selist">
-							<li class="setext">4.9 years of experience in Mobile and Desktop UI web page development targeting all the devices using Responsive Web design (RWD) Mobile First Approach.</li>
-							<li class="setext">Working in AngularJS Client Side MVC Architecture Application.</li>
-							<li class="setext">Experience in developing  rich User Experience sites using latest UI Technologies like AngularJS HTML5/CSS3, JQuery, Twitter Bootstrap CSS Framework, LESS, AJAX,and JavaScript, </li>
-							<li class="setext">Worked in making the site Web Accessibility Compliant for physically challenged users using tools like NVDA screen reader, Web Accessibility Tool and FireEyes</li>
-							<li class="setext">Experience in developing the web pages for mobiles and desktop and fixing the device specific defects in mobiles using tools.</li>
-							<li class="setext">Automated the repeated tasks using Node JS Module GRUNT, BOWER and used tools like WEINRE to debug the defects in mobiles.</li>
-							<li class="setext">Reduced the loading time of website using front end performance tuning of JavaScript, CSS and Images using image sprite technique and tested using tools like HTTPS watch, Fiddler.</li>
-							<li class="setext">Worked on projects in waterfall and agile methodology.</li>
-							<li class="setext">Rich experience in Telecommunication domain.</li>
-							<li class="setext">Experience in working with multiple vendors and geographically distributed teams.</li>
-						</ul>
-					</div>
-					
-				</section>
+		<!--START:  social section-->
+		<section class="pf_intro">
+			<div class="pf_intro_i_1">
+
+
+				<!--START:  Profile Intro: Profile Image-->
+				<div class="pf_photo_cont">
+					<img class="pf_photo" src="images/hussain_prof_new.jpg" alt="hussain_profile_pic">
+				</div>
+				<!--END: Profile Intro: Profile Image -->
 				
-				<section class="gensec">
-					<div class="bar">
-						 Technical Skills
-					</div>
+
+
+				<!--START:  Profile Intro: Name-->
+				<p class="pf_name">
+					Mohamed Hussain S H
+				</p>
+				<!--END:  Profile Intro: Name-->
+				
+
+				<!--START:  Profile Intro: work Locationa nd Position-->
+				<div class="pf_pos_cont">
+					<p class="pf_pos_text">
+						FrontEnd Developer
+						<span class="pf_pos_text_company_working">
+							<svg class="pf_pos_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#at"></use> 
+							</svg>
+							Sky News Arabia, AbuDhabi
+						</span>
+					</p>
+				</div>
+				<!--END:  Profile Intro: work Locationa nd Position-->
+				
+
+				<!--START:  Profile Contact-->
+				<div class="pf_contact">
 					
-					<div class="secont">
-						<div class="sesub">
-							UI Technologies Worked
+					<div class="pf_contact_item">	
+						<div class="pf_contact_item_icon_cont">
+							<svg class="pf_contact_item_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#email"></use> 
+							</svg>
 						</div>
-						<div class="skillcont">
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-sm-12 skillboxcont">
-										<div class="row ">
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>Mobile UI</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>Javascript</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4.8/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>HTML 5</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>CSS 3</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>jQuery</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:3/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>Twitter Bootstrap</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:2/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>AngularJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:2/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>AJAX</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="5"></p>
-													<p>Years of Exp:4/4.9 Months</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>OOJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="2"></p>
-													<p>Years of Exp:2 Months</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>LESS, Modernizr, RespondJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:3/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>NodeJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="3"></p>
-													<p>Years of Exp:.6/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>Grunt, WEINRE, Bower, Yeoman</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="4"></p>
-													<p>Years of Exp:2/4.9</p>
-												</div>
-											</div>
-											<div class="col-sm-6 col-md-3   skillbox">
-												<div class="inn">
-													<p>Basics of Sencha and EXTJS</p>
-													<p>Expertise <input type="hidden" class="rating" readonly="readonly" value="2"></p>
-													<p>Years of Exp:2 Months</p>
-												</div>
-											</div>
-											
-										</div>
-									
-									</div>
+						<p class="pf_contact_item_text">
+							<a href="mailto:shmdhussain15@gmail.com">shmdhussain15@gmail.com</a>
+						</p>
 
-								</div>
+					</div>
+
+					<div class="pf_contact_item">	
+						<div class="pf_contact_item_icon_cont">
+							<svg class="pf_contact_item_icon ex_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#skype"></use> 
+							</svg>
+						</div>
+						<p class="pf_contact_item_text">
+							mohamed_hussain_sh
+						</p>
+
+					</div>
+
+					<div class="pf_contact_item">	
+						<div class="pf_contact_item_icon_cont">
+							<svg class="pf_contact_item_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#mobile"></use> 
+							</svg>
+						</div>
+						<p class="pf_contact_item_text">
+							<a href="tel:00971559200565">+971-559200565</a>
+						</p>
+
+					</div>
+
+
+				</div>
+				
+
+				<!--END:  Profile Contact-->
+
+
+				<!--START:  Profile Intro: Scoial Contact-->
+				<div class="pf_social_cont">
+					<div class="pf_social_head">
+						
+					</div>
+
+					<div class="pf_social_item_cont">
+						
+						<a href="https://twitter.com/shmdhussain12" class="pf_social_item">
+							<svg class="pf_social_icon ex_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#twitter"></use> 
+							</svg>
+							<span class="pf_social_item_text">
+								
+							</span>
+						</a>
+						<a href="https://stackoverflow.com/users/1550778/mohamed-hussain" class="pf_social_item">
+							<svg class="pf_social_icon ex_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#stackoverflow"></use> 
+							</svg>
+							<span class="pf_social_item_text">
+								
+							</span>
+						</a>
+						<a href="https://github.com/shmdhussain" class="pf_social_item">
+							<svg class="pf_social_icon ex_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#github"></use> 
+							</svg>
+							<span class="pf_social_item_text">
+								
+							</span>
+						</a>
+						<a href="https://www.linkedin.com/in/mohamed-hussain-s-h-47b1b5a9/" class="pf_social_item">
+							<svg class="pf_social_icon ex_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#linkedin"></use> 
+							</svg>
+							<span class="pf_social_item_text">
+								
+							</span>
+						</a>
+					</div>
+
+
+				</div>
+				
+				<!--END:  Profile Intro: Scoial Contact-->
+
+			</div>
+
+		</section>
+		<!--END:  social section-->
+
+		<!--START:  Experience Section-->
+		<section class="pf_exp pf_detail_section">
+			<div class="pf_exp_i_1">	
+				<h2 id="experience" class="pf_h2">	
+					Experience
+				</h2>	
+
+				<div class="pf_detail_cont">
+					<p><span class="sh_semi_bold">Having eight years of experience</span> in front end development in the  reputed companies like</p>
+					<div class="pf_comp_cont">
+						<a href="https://www.skynewsarabia.com" target="_blank" class="pf_comp_name link_sh">
+							<svg class="pf_comp_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#work"></use> 
+							</svg>
+							<span class="pf_comp_name_text">SKY NEWS ARABIA</span>
+							<div class="pf_comp_duration">
+								Abu Dhabi, as FrontEnd Developer (2015 - present)
 							</div>
-						</div>
-						
-						<div class="sesub">
-							 Backend Technolgies
-						</div>
-						<div class="secont">
-							<ul class="selist">
-								<li class="setext">Java, J2EE, SQL, C, MongoDB, Struts1.2.</li>
-							</ul>
-						</div>
-						
-						<div class="sesub">
-							Softwares worked
-						</div>
-						<div class="secont">
-							<ul class="selist">
-								<li class="setext">GIT, IE8, IE9, IE10, IE11, Chrome, Firefox, Safari, Mobile Safari, Android emulators, XCODE Emulator, Windows Phone Emulator, NotePad++, KEYNOTE MITE, SVN, Device Connect</li>
-							</ul>
-						</div>
-					</div>
-					
-				</section>
-				<section class="gensec">
-					<div class="bar">
-						Work Experience
-					</div>
-					
-					<div class="secont">
-						<div class="sesub">
-							Total Experience
-						</div>
-						<div class="skillcont">
-							<p class="setext"><b>4.9 Years</b> of Experience in <b>Infosys Limited</b> during the period June 2010 to till date</p>
-						</div>
-					</div>
-					
-					
-					<div class="secont">
-						<div class="sesub">
-							Projects Worked
-						</div>
-						
-						<div class="secondarycont">
-							<!-- Button trigger modal -->
-							<a href="#myModal"  class="setext viewscreen " data-toggle="modal">
-							  View screen Prototype
-							</a>
-						</div>
-						
-						
-						
-						<ul class="secondarycont">
-							<li class="setext"><b>Project Title: OLAM – Online Account Management or www.att.com</b> </li>
-							<li class="setext">Desktop view: <a href="http://www.att.com/">www.att.com</a></li>
-							<li class="setext">Mobile view: <a href="https://m.att.com/myatt/#/">m.att.com/myatt</a></li>
-							<li class="setext">Client: AT&amp;T</li>
-							<li class="setext">Duration:  From March, 2011 to till date</li>
-							<li class="setext">Description:  Online Account Management (OLAM) involves development of a web application for customers who can 
-view, analyze, manage and pay bills for different services provided by the 
-company. The application is supported in Desktop as well as Mobile devices using Mobile First Responsive Web Design approach using Twitter Bootstrap, currenly the transtion process from 
-conventional desktop to RWD website is going on.
+						</a>
 
-<br/>
-<br/>
-This development project involving requirements(wireframes)/User stories gathering , design and convert the wireframes into actual HTML screens covering all 
-the devices ranging from desktop to mobile. The project is implemented in agile methodology.
-
-						</li>
-						</ul>
-						<ul class="secondarycont">
-							<li class="setext"><b>Project Title: EOS – Enable Order Status</b></li>
-							<li class="setext">Desktop view: <a href="https://www.att.com/eos/unauth/eosLogin?productType=wireline">www.att.com/eos/unauth/eosLogin?productType=wireline</a></li>
-							<li class="setext">Mobile view: <a href="https://m.att.com/checkorder/#/">m.att.com/checkorder/#/</a></li>
-							<li class="setext">Client: AT&amp;T</li>
-							<li class="setext">Description:This application is one of the sub module in att.com which enables the customers to track their orders
-						</li>
-						</ul>
+						<a href="https://www.infosys.com" target="_blank" class="pf_comp_name link_sh">
+							<svg class="pf_comp_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#work"></use> 
+							</svg>
+							<span class="pf_comp_name_text">INFOSYS (Client: AT&T)</span>
+							<div class="pf_comp_duration">
+								Chennai, as UI Implementation Specialist (2010 - 2015)
+							</div>
+						</a>
 						
+					</div>
+
+				</div>
+			</div>		
+
+		</section>	
+		<!--END:  Experience Section-->
+
+		<!--START:  Key Skillset Section-->
+		<section class="pf_detail_section">
+			<div class="pf_exp_i_1">	
+				<h2 id="experience" class="pf_h2">	
+					 Key Areas and Tech Worked
+				</h2>	
+				<div class="pf_detail_cont">
+					<div class="pf_comp_cont">
 						
-						<ul class="secondarycont">
-							<li class="setext"><b>Project Title: ToBR – Transfer of Billing Responsibility</b></li>
-							<li class="setext">RWD Site: <a href="https://www.att.com/tobr/tobrHomePage.rt">https://www.att.com/tobr/tobrHomePage.rt</a></li>
-							<li class="setext">Client: AT&amp;T</li>
-							<li class="setext">Description:This application is one of the sub module in att.com which enables the customers to transfer the billing responsibilty to another account
-						</li>
-						</ul>
-						
-						<ul class="secondarycont">
-							<li class="setext"><b>Project Title: Consumer Insights Platform ( Internal to AT&amp;T)</b></li>
-							<li class="setext">Client: AT&amp;T</li>
-							<li class="setext">Description: This application is on Big data, collected to find out the customers's preferences and to provide the services of their interest.
-						</li>
-						</ul>
-					
-						<div class="sesub">
-							Roles and Responsibility
-						</div>
-						<ul class="secondarycont">
-							<li class="setext">Development of Application in client side MVC pattern using AngularJS.</li>
-							<li class="setext">Developed Web Pages for all the devices using Responsive Web Design(RWD)’s Mobile First approach using HTML5/CSS3.</li>
-							<li class="setext">Developed Pages using Twitter Bootstrap and customized Twitter bootstrap for the project requirement using LESS.</li>
-							<li class="setext">Design and implement the UI widgets like carousel, tabs etc. using jQuery and JavaScript.</li>
-							<li class="setext">Developed the Web pages with Web Accessibility complaint for physically challenged users using tools like NVDA screen readers, Web Accessibility Tool Fire Eyes add on and Voice over functionality in iPhone and android platforms.</li>
-							<li class="setext">Analysis of Requirement Wireframes/User stories and Development of HTML Page</li>
-							<li class="setext">Development of Web Page With Rich UI Experience using cutting edge front End Technologies</li>
-							<li class="setext">Unit Testing of Developed web page in all the devices ranging from all the mobile, tablets and desktop using real mobile devices and using emulators.</li>
-							<li class="setext">Provided solution for the complex Cross Device/ Cross Browser defects and able to find out the issue is with the device specific or in coding.</li>
-							<li class="setext">Setting up of Test Lab with emulators of different platform (Android iOS XCode, Windows Phone official emulator) for testing the web page in all the devices </li>
-							<li class="setext">Performed the Front End Code Tuning (in CSS and JavaScript and image sprites) of Website to reduce the loading time using HTTPS WATCH.</li>
-							<li class="setext">Automated repeated tasks like Minification, Compression etc... using GRUNT Bower, a NodeJS modules.</li>
-							<li class="setext">Sets up WEINRE, a remote Web Inspector to analyze the pages in Mobile Devices.</li>
-							<li class="setext">Architecting the UI for the new projects starting from the scratch.</li>
-							<li class="setext">Coordinated with multiple vendors from geographically distributed teams for a successful development, testing and deployment of a single project</li>
-							<li class="setext">Additional responsibilities as KM anchor for the project and periodically share the latest trends in UI with the team.</li>
-						</ul>
+						<ul class="pf_key_skills_list_cont">
 
-					</div>
-					
-				</section>
 
-				
-				
-				<section class="gensec">
-					<div class="bar">
-						Academic Qualification
-					</div>
-					
-					<div class="secont">
-						<ul class="selist">
-							<li class="setext">Bachelor of Engineering in Electronics and Communication in 2010 from ANNA University, Chennai, Tamil Nadu, India. And secured <b>81% First Class with Distinction</b>.</li>
-							<li class="setext">Higher secondary (Std XII) completed in 2006 and secured <b>90.8%</b></li>
-						</ul>
-					</div>
-					
-				</section>
-
-				
-				<section class="gensec">
-					<div class="bar">
-						Certifications or Professional Awards
-					</div>
-					
-					<div class="secont">
-						<ul class="selist">
-							<li class="setext">
-							
-								Microsoft Certified Professional in <b>“Programming in HTML5 with JavaScript and CSS3”</b>
-								<div class="mcp"></div>
-							
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							HTML, CSS, Javascript, AJAX, SVG and basic FrontEnd Tech
+	    						</span>
 							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							AngularJS and Clientside MVC
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							ReactJS and Web Components
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+							
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Latest Javascript APIs in ES2015, ES2018
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							NodeJs and Templating with JSPs, Pug
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Website Performance Optimization and Accessibility
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Server Side Integration Of Client Side MVC Framework
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Progressive Web Application (PWA) 
+							</li>
+							<!--END:  Key SKill Set Item:-->
+							
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Modern Web Layouts Using CSS3 Grid Flexbox SCSS
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+							
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							DFP Ads Integration
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Cross Browser Support
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Responsive Web Design(RWD), Single Page Application (SPA)
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							CSS Animations, Greensock, Scrollmagic, Infinite Scroller
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Search Engine Optimization (SEO)
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							AMP, Facebook Instant Articles. Google News Stand
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							HTML Email
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							TDD using Karma, Jasmine
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Build Tools Gulp, Grunt, NPM
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Hybrid App Development Phonegap Cordova
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+							
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Browser Automation Using Puppeeteer
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Google analytics and Crux with Google Data Studio
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							
+
+							
+
+							
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							jQuery, jQueryUI, Sencha Mobile, Bootstrap, Foundation
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+							<!--START:  Key SKill Set Item:-->
+							<li class="pf_key_skills_list_item">
+								<svg class="pf_key_skills_list_item_icon sh_icon">
+	    						 <use xlink:href="images/svg/profile_sprite.svg#code"></use> 
+	    						</svg>
+	    						<span class="pf_key_skills_list_item_text">
+	    							Photoshop and Design Basics
+	    						</span>
+							</li>
+							<!--END:  Key SKill Set Item:-->
+
+
 						</ul>
+						
+					</div>
+				</div>
+				
+
+			</div>		
+
+		</section>	
+		<!--END:  Key Skillset Section-->
+		
+		<!--START:  Project Experience Section-->
+		<section class="pf_exp pf_detail_section pf_detail_small_section">
+			<div class="pf_exp_i_1">	
+				<h2 id="experience" class="pf_h2">	
+					Project Experience 
+				</h2>	
+				<div class="pf_detail_cont">
+					<ul class="pf_detail_list">
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Developing fast accessible responsive web pages using HTML JS and CSS.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Client side MVC frameworks: AngularJs, React, sencha and extjs and using jQuery since started and for past three years turning back to plain vanilla js.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Experience in latest ES6 and PWA features web push, service worker.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Converting the critical above the fold content from clientside rendering into server side rendering in angular.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Good knowledge in understanding the inner working of the render pipeline of the browser
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Worked Single Page Applications.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Experience in optimizing the performance by reducing the load in critical rendering path of browsers.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Automating the repeated browser  tasks and testing using  chrome puppeteer nodejs module.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Build tools :grunt, gulp and npm of course.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								TDD using Test runner karma and Jasmine for angularjs
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Search Engine Optimization and HTML email.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Web  performance Optimization using proper caching techniques and browser hints prefetch and preload and measuring it using lighthouse and pagespeed and webpage test
+							</span>
+						</li>
+
+
+						
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Image optimization using client hints and tools like imagemin and modules like mozjpeg.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								CSS frameworks customized for bootstrap and foundation (SCSS) and currently working inbuilt style guide for skynewsarabia.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Worked in  templating engines like JSP , nunjucks.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Worked in social media integration with the website for Facebook, Twitter, YouTube.
+							</span>
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Animation in web using proper css animations and using greensock .
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Worked in Hybrid phonegap application(sky news football app).
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Fixing the cross browser defects since IE8 times.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Working with Git and svn version control
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Experience in working with Audio video elements in the web and 360 video.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Working in sublime(primary) and vs code( trying to switch to it).
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Experience in working with geographically distributed and diverse team.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Worked in Agile and waterfall methodology.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Working in both Mac and windows platform.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Experience in working with express and nodejs for personal work and automation.
+							</span>
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Basic BE experience in java and sql and mongodb.
+							</span>
+						</li>
+					</ul>
+				</div>
+			</div>		
+		</section>	
+		<!--END:  Project Experience Section-->
+
+
+		<!--START:  Professional Cetifications Section-->
+		<section class="pf_exp pf_detail_section pf_detail_small_section">
+			<div class="pf_exp_i_1">	
+				<h2 id="experience" class="pf_h2">	
+					Certification
+				</h2>	
+
+				<div class="pf_detail_cont">
+					<div class="pf_detail_text_cont pf_item_cont">
+						<svg class="pf_item_icon sh_icon">
+						 <use xlink:href="images/svg/profile_sprite.svg#certificate"></use> 
+						</svg>
+						<div class="pf_item_text">
+							Microsoft certified professional for programming in HTML5 using JavaScript and CSS3.
+						</div>
 					</div>
 					
-				</section>
+				</div>
+			</div>		
 
-			</div>
-			
-			
+		</section>	
+		<!--END:  Professional Cetifications Section-->
 
-		</body>
-	</html>
+
+		<!--START:  EDUCATION Section-->
+		<section class="pf_exp pf_detail_section pf_detail_small_section">
+			<div class="pf_exp_i_1">	
+				<h2 id="experience" class="pf_h2">	
+					Education
+				</h2>	
+
+				<div class="pf_detail_cont">
+					<div class="pf_detail_text_cont pf_item_cont">
+						<svg class="pf_item_icon sh_icon">
+						 <use xlink:href="images/svg/profile_sprite.svg#library"></use> 
+						</svg>
+						<div class="pf_item_text">
+							Bachelor of Engineering (DISTINCTION) in Electronics and Communication from Crescent Engineering College, Chennai , India - 2010.
+						</div>
+					</div>
+				</div>
+
+				
+			</div>		
+
+		</section>	
+		<!--END:  EDUCATION Section-->
+
+		<!--START:  Interests Section-->
+		<section class="pf_exp pf_detail_section pf_detail_small_section">
+			<div class="pf_exp_i_1">	
+				<h2 id="experience" class="pf_h2">	
+					Interests
+				</h2>	
+
+				<div class="pf_detail_cont">
+					<ul class="pf_detail_list">
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Latest web technologies and trying to match the web with native app like experience with PWA (SW, background sync) and performance optimization for web
+							</span>
+
+						</li>
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Following latest trends and techniques of front end in Twitter my profile is @shmdhussain12
+							</span>
+
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Doing small cool stuffs and automating tasks in terminal.
+							</span>
+
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Reading books especially book apart series, recent book is "responsive layout" by Rachel and reading now is "using svg in html5" by Amelia and favorite  is "professional JavaScript for web developers" by Nicholas Zakas.
+							</span>
+
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Tinkering with devtools and latest cool things found is network overrides.
+							</span>
+
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Watching conference talks to get to know about trends and latest advancements.
+							</span>
+
+						</li>
+
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Learning new tech and trying to dig deep in tech and teaching and sharing with others what I know.
+							</span>
+
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Automating the repeated boring tasks.
+							</span>
+
+						</li>
+
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#point_arrow_right"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">
+								Playing and watching football and playing fanatsy and rest of time be with friends and family.
+							</span>
+
+						</li>
+
+
+
+						
+						
+						
+						
+						
+						
+						
+						
+					</ul>
+				</div>
+			</div>		
+		</section>	
+		<!--END:  Interests Section-->
+
+		<!--START:  Personal details Section-->
+		<section class="pf_exp pf_detail_section pf_detail_small_section">
+			<div class="pf_exp_i_1">	
+				<h2 id="about_me" class="pf_h2">	
+					About Me 
+				</h2>	
+
+				<div class="pf_detail_cont">
+					<div class="pf_detail_text_cont pf_item_cont pf_about_me_item_cont">
+						<svg class="pf_item_icon sh_icon">
+						 <use xlink:href="images/svg/profile_sprite.svg#family"></use> 
+						</svg>
+						<div class="pf_item_text">
+							Husband. Father. From Chennai India.
+						</div>
+					</div>
+				</div>
+			</div>		
+
+		</section>	
+		<!--END:  Personal details Section-->
+
+		<!--START:  In Progress Section-->
+		<section class="pf_exp pf_detail_section pf_detail_small_section last">
+			<div class="pf_exp_i_1">	
+				<h2 id="experience" class="pf_h2">	
+					In progress
+				</h2>	
+
+				<div class="pf_detail_cont">
+					<ul class="pf_detail_list">
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#thermostat_half"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">Personal blog with nodejs , mongodb express, pug</span>
+
+						</li>
+						<li class="pf_detail_list_item">
+							<svg class="pf_detail_list_item_text_icon sh_icon">
+							 <use xlink:href="images/svg/profile_sprite.svg#thermostat_half"></use> 
+							</svg>
+							<span class="pf_detail_list_item_text">giving a try for google mobile web specialist certification </span>
+
+						</li>
+					</ul>
+				</div>
+			</div>		
+		</section>	
+		<!--END:  In Progress Section-->
+
+		
+
+		
+
+		<script src="js/app.js"></script>
+	</body>
+</html>

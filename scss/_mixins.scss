@@ -1,0 +1,111 @@
+@mixin responsive-unit($propName, $unit, $minVal, $maxVal, $minPoint, $maxPoint) {
+    $res-mq: "#{$screen} and (min-width:#{$minPoint}px) and (max-width:#{$maxPoint}px)";
+    $res-max-mq: "#{$screen} and (min-width:#{$maxPoint}px)";
+
+    #{$propName}: #{$minVal}px;
+    @media #{$res-max-mq} {
+        #{$propName}: #{$maxVal}px;
+    }
+    @media #{$res-mq} {
+        #{$propName}: calc( #{$minVal}px + (#{$maxVal} - #{$minVal}) * (100vw - #{$minPoint}px) / (#{$maxPoint} - #{$minPoint}));
+    }
+}
+
+
+/*START:Flexbox Mixins */
+@mixin flex_container($isImportant:"") {
+    @if $isImportant == 'important' {
+        display: -ms-flexbox  !important;
+        display: -webkit-flex  !important;
+        display: flex  !important;
+   } @else {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+   }
+}
+
+@mixin flex_container_wrap($wrap-val: nowrap) {
+    //wrap value
+    -ms-flex-wrap: $wrap-val;
+    -webkit-flex-wrap: $wrap-val;
+    flex-wrap: $wrap-val;
+}
+
+@mixin flex_item(){
+  -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+
+}
+@mixin item_col_width_rel($no_of_track, $total_no_of_track) {
+    $width: ($no_of_track / $total_no_of_track) * 100%;
+    @include item_col_width_abs($width);
+}
+
+@mixin item_col_width_abs($col_width) {
+    width: $col_width;
+}
+
+/*END:Flexbox Mixins */
+
+/*START:Aspect Ratio Mixins */
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .aspect_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+/*END:Aspect Ratio Mixins */
+
+/*START: Stop scss converting hsl color into hex */
+@function hsl($h, $s, $l) {
+  @return unquote('hsl(#{$h}, #{$s}, #{$l})');
+}
+/*END:  Stop scss converting hsl color into hex */
+
+/*START:Find lower and upper bound in the param passed as (lower_bound, uper_bound) */
+@function lower-bound($range) {
+    @if length($range) <=0 {
+        @return 0;
+    }
+    @return nth($range, 1);
+}
+
+@function upper-bound($range) {
+    @if length($range) < 2 {
+        @return 999999999999;
+    }
+    @return nth($range, 2);
+}
+/*END:Find lower and upper bound in the param passed as (lower_bound, uper_bound) */
+
+/*START:mixin for responsive units, that is from 100 to 200px screen size 
+        go from min to max point
+        and before min resolution(100px) that min value 
+        and after 200(maximum resolution) max value */
+@mixin responsive-unit($propName, $unit, $minVal, $maxVal, $minPoint, $maxPoint) {
+    $res-mq: "#{$screen} and (min-width:#{$minPoint}px) and (max-width:#{$maxPoint}px)";
+    $res-max-mq: "#{$screen} and (min-width:#{$maxPoint}px)";
+
+    #{$propName}: #{$minVal}px;
+    @media #{$res-max-mq} {
+        #{$propName}: #{$maxVal}px;
+    }
+    @media #{$res-mq} {
+        #{$propName}: calc( #{$minVal}px + (#{$maxVal} - #{$minVal}) * (100vw - #{$minPoint}px) / (#{$maxPoint} - #{$minPoint}));
+    }
+}
+/*END:  mixin for responsive units, that is from 100 to 200px screen size 
+        go from min to max point
+        and before min resolution(100px) that min value 
+        and after 200(maximum resolution) max value */  
