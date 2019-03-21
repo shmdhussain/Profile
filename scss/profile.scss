@@ -12,9 +12,9 @@ to be included in all the css files to be generated */
 	color:$color_neutral_10;
 	min-height: 200px;
 	padding: 40px;
-	position: -webkit-sticky;
-	position: sticky;
-	top:0;
+	// position: -webkit-sticky;
+	// position: sticky;
+	// top:0;
 	
 }
 .pf_intro_i_1{
@@ -164,8 +164,8 @@ to be included in all the css files to be generated */
 .pf_detail_section{
 	padding: 20px 10px 0;
 
-	position: relative;
-    z-index: 1;
+	// position: relative;
+    // z-index: 1;
     background-color: $color_neutral_10;
 	&.last{
 		padding-bottom: 20px;
