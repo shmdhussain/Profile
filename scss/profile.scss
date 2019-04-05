@@ -198,7 +198,7 @@ to be included in all the css files to be generated */
     padding: 5px 0 5px 12px;
     background-color: $color_neutral_9;
     position: relative;
-	background-image: linear-gradient(45deg, #{$color_neutral_9}, rgba(255, 255, 255, 0.86));
+	background-image: linear-gradient(45deg, #{$color_neutral_9}, #{$color_neutral_10});
     
 	font-size: $font_size_4;
 	@media #{$medium-and-up} {
