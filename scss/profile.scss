@@ -197,7 +197,10 @@ to be included in all the css files to be generated */
     // text-transform: uppercase;
     padding: 5px 0 5px 12px;
     background-color: $color_neutral_9;
-    position: relative;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index:1;
 	background-image: linear-gradient(45deg, #{$color_neutral_9}, #{$color_neutral_10});
     
 	font-size: $font_size_4;
@@ -223,6 +226,8 @@ to be included in all the css files to be generated */
 .pf_detail_cont{
 	padding-top: 30px;
 	padding-left: 15px;
+	z-index:0;
+	position: relative;
 }
 
 .pf_comp_cont{
