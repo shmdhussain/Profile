@@ -1,0 +1,46 @@
+//refernece https://www.sublimetext.com/docs/3/projects.html, 
+
+// Settings may be specified here using the settings key, and will override regular user settings. They will not, however, override syntax specific settings.
+// Note that only settings in the category Editor Settings may be controlled by a project.
+//** wildcard will not work
+
+
+{
+    "folders": [
+        {
+            //exclude files/folder entire folder (use "/" at the endof folder), for Goto Anything() or Find in Files(ctrl+f). 
+            //CPU Indexing s also prevented see https://forum.sublimetext.com/t/solved-high-cpu-usage-in-beta-3124/23060/3
+            "binary_file_patterns": [
+                "scripts/",
+                ".sass-cache/",
+                "css/",
+                "node_modules/",
+                ".git/",
+                "npm-debug.log"
+            ],
+
+            //exclude files for sidebar and sometimes it is working for find in files(ctrl+f) also
+            "file_exclude_patterns": [
+            	"css/*.css",
+                "scripts/*.js",
+                "npm-debug.log"
+            ],
+            //exclude folder(dont use end slash after folder name) for sidebar and sometimes it is working for find in files(ctrl+f) also
+            "folder_exclude_patterns": [
+                ".svn",
+                ".hg",
+                "CVS",
+                ".git",
+                ".sass-cache",
+                "node_modules" 
+            ],
+            "path": "/Users/Mohamed_Hussain_SH/mylocal/Demo/Profile"
+        }
+
+    ],
+
+    "settings":
+    {
+
+    },
+}

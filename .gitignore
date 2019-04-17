@@ -12,6 +12,7 @@ node_modules
 .torus.json
 coverage
 /tags
+npm-debug.log
 
 #Ignore public uploads
 /public/uploads/*
@@ -39,6 +40,8 @@ latest.dump
 #ignore puppeteer issue
 **/Library/Application Support/
 
+#ignore sublime workspace
+*.sublime-workspace
 
 #ignore css file gen from scss file
 #css/**/*.css
