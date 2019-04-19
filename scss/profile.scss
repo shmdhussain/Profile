@@ -286,7 +286,14 @@ to be included in all the css files to be generated */
 }
 
 .pf_comp_desc_job_res{
-	padding: 5px 0 10px 50px;
+	padding: 5px 0 10px 25px;
+	@media #{$medium-and-up} {
+		padding: 5px 0 10px 30px;
+	}
+	@media #{$large-and-up} {
+		padding: 5px 0 10px 50px;
+	}
+
 }
 /*END:Experience */
 
