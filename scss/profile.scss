@@ -140,6 +140,15 @@ to be included in all the css files to be generated */
 	@include flex_container();
 	align-items: center;
 	justify-content: center;
+	text-decoration: none;
+	color: $color_neutral_10;
+	&:hover,
+	&:active,
+	&:focus{
+	    text-decoration: none;
+	    color: $color_neutral_10;
+	}
+
 }
 .pf_web_page_link_text_icon{
 	width:16px;
