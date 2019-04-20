@@ -115,6 +115,53 @@ to be included in all the css files to be generated */
 	color: $color_primary_5;
 }
 
+.pf_web_page_link_cont{
+	@include flex_container();
+	@include flex_container_wrap(wrap);
+	justify-content: center;
+	// padding-top: 20px;
+	padding-bottom: 20px;
+}
+.pf_web_page_link_title{
+	@include flex_item();
+	@include flex_container();
+	align-items: center;
+	justify-content: center;
+}
+.pf_web_page_link_title_icon{
+	width:24px;
+	height:24px;
+
+	fill : $color_primary_9;
+	color: $color_primary_5;
+}
+.pf_web_page_link_text_cont{
+	@include flex_item();
+	@include flex_container();
+	align-items: center;
+	justify-content: center;
+}
+.pf_web_page_link_text_icon{
+	width:16px;
+	height:16px;
+	fill : $color_primary_9;
+	color: $color_primary_5;
+}
+.pf_web_page_link_text{
+	text-decoration: none;
+	color: $color_neutral_10;
+	&:hover,
+	&:active,
+	&:focus{
+	    text-decoration: none;
+	    color: $color_neutral_10;
+	}
+
+
+}
+
+
+
 .pf_pos_text_icon{
 	fill : $color_neutral_10;
 	color: $color_neutral_10;
