@@ -1,0 +1,25 @@
+{
+"short_name": "Mohamed Hussain",
+"name": "Mohamed Hussain Profile",
+"icons": [ 
+ { 
+	"src": "images/manifestIcons/mohamed_hussain_profile_icon_48x48.png",
+	"type": "image/png",
+	"sizes": "48x48"
+},
+ { 
+	"src": "images/manifestIcons/mohamed_hussain_profile_icon_96x96.png",
+	"type": "image/png",
+	"sizes": "96x96"
+},
+ { 
+	"src": "images/manifestIcons/mohamed_hussain_profile_icon_192x192.png",
+	"type": "image/png",
+	"sizes": "192x192"
+}
+],
+"theme_color": "#102a42",
+"background_color": "#f1f5f8",
+"start_url": "index.html",
+"display": "standalone"
+}
