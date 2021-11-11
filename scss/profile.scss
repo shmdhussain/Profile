@@ -1,9 +1,9 @@
-/*START:partial scss files 
+/*START:partial scss files
 to be included in all the css files to be generated */
 @import '_mixins';
 @import '_variables';
 @import '_media_query_variables';
-/*END:partial scss files 
+/*END:partial scss files
 to be included in all the css files to be generated */
 
 /*START:Intro Part  */
@@ -15,23 +15,35 @@ to be included in all the css files to be generated */
 	// position: -webkit-sticky;
 	// position: sticky;
 	// top:0;
-	
+
 }
 .pf_intro_i_1{
 	max-width: 55em;
 	margin: 0 auto;
 }
 .pf_photo_cont{
-	@include flex_container();
-	justify-content: center;
-	align-items: center;
+	position: relative;
+	max-width: 130 px;
+	left: 50%;
+	transform: translate(-50%, 0);
+	width: 33%;
+	&:before{
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: 100%;
+	}
 }
-
+.pf_photo_inner_cont{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+}
 .pf_photo{
-	@include flex_item();
 	border-radius: 50%;
-	max-width:100px;
-	box-shadow: 1px 1px 7px 2px;
 }
 
 .pf_name{
@@ -65,7 +77,7 @@ to be included in all the css files to be generated */
 	}
 }
 .pf_pos_text_company_working{
-	white-space: nowrap;	
+	white-space: nowrap;
 }
 .pf_contact{
 	@include flex_container();
@@ -84,7 +96,7 @@ to be included in all the css files to be generated */
 	padding-top:  20px;
 	@media #{$small-and-down} {
 		justify-content: flex-start;
-		min-width: 	266px;	
+		min-width: 	266px;
 	}
 }
 
@@ -181,18 +193,18 @@ to be included in all the css files to be generated */
 }
 
 .pf_social_cont{
-	@include flex_container();	
-	justify-content: center;	
-	align-items: center;	
+	@include flex_container();
+	justify-content: center;
+	align-items: center;
 
 }
 .pf_social_item_cont{
-	@include flex_container();	
-	justify-content: center;	
-	align-items: center;	
+	@include flex_container();
+	justify-content: center;
+	align-items: center;
 }
 .pf_social_item{
-	@include flex_item();	
+	@include flex_item();
 	border:2px solid $color_primary_9;
 	border-radius: 50%;
 	padding: 8px;
@@ -259,7 +271,7 @@ to be included in all the css files to be generated */
     top:0;
     z-index:1;
 	background-image: linear-gradient(45deg, #{$color_neutral_9}, #{$color_neutral_10});
-    
+
 	font-size: $font_size_4;
 	@media #{$medium-and-up} {
 		font-size: $font_size_5;
@@ -382,34 +394,34 @@ to be included in all the css files to be generated */
 	@include flex_item();
 	@include flex_container();
 	padding-right: 10px;
-	
-	
+
+
 	@include item_col_width_rel(1, 1);
 	&:nth-child(n+2){
-		padding-top: 20px;	
+		padding-top: 20px;
 	};
 	@media #{$medium-and-up} {
 		@include item_col_width_rel(1, 2);
 		&:nth-child(n+1){
-			padding-top: 0;	
+			padding-top: 0;
 		};
 		&:nth-child(n+3){
-			padding-top: 20px;	
+			padding-top: 20px;
 		};
 	}
 	@media #{$large-and-up} {
 		@include item_col_width_rel(1, 3);
 		&:nth-child(n+1){
-			padding-top: 0;	
+			padding-top: 0;
 		};
 		&:nth-child(n+4){
-			padding-top: 20px;	
+			padding-top: 20px;
 		};
 	}
 }
 
 .pf_key_skills_list_item_icon{
-	@include flex_item();	
+	@include flex_item();
 	width: 24px;
 	height: 24px;
 	fill: $svg_icon_color_1;
@@ -427,7 +439,7 @@ to be included in all the css files to be generated */
 
 }
 .pf_detail_list_item{
-	@include flex_container();	
+	@include flex_container();
 }
 .pf_detail_list_item_text_icon{
 	width: 24px;
@@ -448,7 +460,7 @@ li.pf_detail_list_item {
 
 /*START:General Icon with Text Line */
 .pf_item_cont{
-	@include flex_container(); 
+	@include flex_container();
 }
 .pf_item_icon{
 	@include flex_item();

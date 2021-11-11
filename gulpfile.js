@@ -3,8 +3,7 @@ var gulp = require('gulp');
 
 
 // Requires the gulp-sass plugin
-var sass = require('gulp-sass');
-
+var sass = require("gulp-sass")(require("node-sass"));
 // Requiring Sourcemaps
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -15,8 +14,8 @@ var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
 
 
-gulp.task('sass', function(done) {	
-  gulp.src('scss/**/*.scss') // Gets the styles.scss file
+gulp.task('sass', function() {
+  return gulp.src('scss/**/*.scss') // Gets the styles.scss file
 	 .pipe(plumber({ errorHandler: function(err) {
         notify.onError({
             title: "Gulp error in " + err.plugin,
@@ -28,14 +27,14 @@ gulp.task('sass', function(done) {
     .pipe(sass())
     .pipe(sourcemaps.write()) // Writing sourcemaps
     .pipe(gulp.dest('css'));
-    done();
+    // done();
 });
 
 
 
 gulp.task('watch', gulp.series('sass', function(done) {
   gulp.watch('scss/**/*.scss', gulp.series('sass'));
-  // done();
+  done();
 }));
 
 gulp.task('default', gulp.series('watch'));
