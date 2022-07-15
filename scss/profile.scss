@@ -294,6 +294,11 @@ to be included in all the css files to be generated */
 		left: 0;
 		top: 0
     };
+
+	&:focus-visible{
+		outline: $svg_icon_color_1 auto 1px;
+		//test
+	}
 }
 
 .pf_detail_cont{
