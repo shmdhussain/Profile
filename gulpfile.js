@@ -38,3 +38,4 @@ gulp.task('watch', gulp.series('sass', function(done) {
 }));
 
 gulp.task('default', gulp.series('watch'));
+gulp.task('build', gulp.series('sass'));
