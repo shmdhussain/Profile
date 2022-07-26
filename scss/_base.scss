@@ -1,36 +1,35 @@
 @import 'reset';
 
-//test
 
 @font-face {
   font-family: 'Inter';
-  src:  url('font/Inter-ExtraLight-BETA.woff2') format('woff2'),
-        url('font/Inter-ExtraLight-BETA.woff') format('woff');
+  src:  url('../font/Inter-ExtraLight-BETA.woff2') format('woff2'),
+        url('../font/Inter-ExtraLight-BETA.woff') format('woff');
   font-weight: 200;
 }
 @font-face {
   font-family: 'Inter';
-  src:  url('font/Inter-Regular.woff2') format('woff2'),
-        url('font/Inter-Regular.woff') format('woff');
+  src:  url('../font/Inter-Regular.woff2') format('woff2'),
+        url('../font/Inter-Regular.woff') format('woff');
   font-weight: 400;
 }
 @font-face {
   font-family: 'Inter';
-  src:  url('font/Inter-Medium.woff2') format('woff2'),
-        url('font/Inter-Medium.woff') format('woff');
+  src:  url('../font/Inter-Medium.woff2') format('woff2'),
+        url('../font/Inter-Medium.woff') format('woff');
   font-weight: 500;
 }
 @font-face {
   font-family: 'Inter';
-  src:  url('font/Inter-SemiBold.woff2') format('woff2'),
-        url('font/Inter-SemiBold.woff') format('woff');
+  src:  url('../font/Inter-SemiBold.woff2') format('woff2'),
+        url('../font/Inter-SemiBold.woff') format('woff');
   font-weight: 600;
 }
 
 @font-face {
   font-family: 'Inter';
-  src:  url('font/Inter-Bold.woff2') format('woff2'),
-        url('font/Inter-Bold.woff') format('woff');
+  src:  url('../font/Inter-Bold.woff2') format('woff2'),
+        url('../font/Inter-Bold.woff') format('woff');
   font-weight: 700;
 }
 
@@ -47,6 +46,7 @@ html body{
 *{
 	box-sizing: border-box;
 }
+
 img{
 	max-width: 100%;
 	height:auto;
@@ -101,5 +101,3 @@ img{
 
 }
 /*END:	color variables declaration */
-
-

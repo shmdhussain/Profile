@@ -4,9 +4,10 @@
   "description": "profile of mohamed hussain s h, front end developer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "encho \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
-    "dev": "concurrently \"http-server -p 8081\" \"npm run gulp\""
+    "dev": "concurrently \"http-server -p 8082\" \"npm run gulp\"",
+    "build": "npm run gulp"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,6 @@
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "http-server": "^14.0.0",
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.1"
   }
 }
