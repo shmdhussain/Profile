@@ -1,5 +1,8 @@
 name: "Node CI"
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - "save_file_on_push"
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
@@ -12,8 +15,9 @@ jobs:
           npm run build --if-present
           npm run serve --if-present
       - name: Archive production artifacts
-        run: mkdir -p path/to/artifact
-        run: echo hello > path/to/artifact/world.txt
+        run: |
+          mkdir -p path/to/artifact
+          echo hello > path/to/artifact/world.txt
         uses: actions/upload-artifact@v3
         with:
           name: my-artifact
