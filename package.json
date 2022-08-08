@@ -7,7 +7,8 @@
     "test": "encho \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "dev": "concurrently \"http-server -p 8082\" \"npm run gulp\"",
-    "build": "npm run gulp"
+    "build": "npm run gulp",
+    "serve":"http-server -p 8080"
   },
   "repository": {
     "type": "git",
