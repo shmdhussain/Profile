@@ -9,11 +9,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: npm install, build, and test
-        run: |
-          npm install
-          npm run build --if-present
-          npm run serve --if-present
       - name: Archive production artifacts
         run: |
           mkdir -p path/to/artifact
