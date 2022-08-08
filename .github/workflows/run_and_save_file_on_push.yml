@@ -17,11 +17,9 @@ jobs:
           npm run build --if-present
           npm run serve --if-present
       - name: Archive production artifacts
+        run: mkdir -p path/to/artifact
+        run: echo hello > path/to/artifact/world.txt
         uses: actions/upload-artifact@v3
-        - run: mkdir -p path/to/artifact
-        - run: echo hello > path/to/artifact/world.txt
-
-        - uses: actions/upload-artifact@v3
           with:
             name: my-artifact
             path: path/to/artifact/world.txt
