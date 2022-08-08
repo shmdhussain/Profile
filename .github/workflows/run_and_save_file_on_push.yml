@@ -1,9 +1,9 @@
 name: "Node CI"
 on:
-  [push]:
+  - [push]:
     branches:
       - save_file_on_push
-  workflow_dispatch:
+  - workflow_dispatch:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
