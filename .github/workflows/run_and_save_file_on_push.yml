@@ -1,7 +1,7 @@
 name: Node CI
 
 on:
-  [push]
+  [push]:
     branches:
       - save_file_on_push
 
