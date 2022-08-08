@@ -15,7 +15,7 @@ jobs:
         run: |
           npm install
           npm run build --if-present
-          npm run serve
+          npm run serve --if-present
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         - run: mkdir -p path/to/artifact
