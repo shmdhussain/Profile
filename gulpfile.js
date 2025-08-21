@@ -3,7 +3,7 @@ var gulp = require('gulp');
 
 
 // Requires the gulp-sass plugin
-var sass = require("gulp-sass")(require("node-sass"));
+var sass = require("gulp-sass")(require("sass"));
 // Requiring Sourcemaps
 var sourcemaps = require('gulp-sourcemaps');
 
