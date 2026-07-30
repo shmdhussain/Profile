@@ -50,22 +50,23 @@ jobs:
           name: build-assets
           path: build-assets
 
-      - name: Setup SSH key
+      - name: Setup SSH
+        shell: bash
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_ed25519
           ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
-          chmod 644 ~/.ssh/known_hosts
 
-      - name: Verify SSH auth
+      - name: Install rsync (if missing)
         run: |
-          ssh -i ~/.ssh/id_rsa -o BatchMode=yes -o StrictHostKeyChecking=yes \
-            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "echo SSH_OK"
+          sudo apt-get update -y
+          sudo apt-get install -y rsync
 
-      - name: Copy files to droplet
+      - name: Rsync files to droplet
         run: |
-          scp -r -i ~/.ssh/id_rsa -o BatchMode=yes -o StrictHostKeyChecking=yes \
-            build-assets/* \
-            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/profile.shmdhussain.com/html/"
+          rsync -az  build-assets/ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/profile.shmdhussain.com/html/"
+          # Example: if you want the *contents* of build-assets in DEPLOY_PATH, ensure DEPLOY_PATH exists on the droplet.
