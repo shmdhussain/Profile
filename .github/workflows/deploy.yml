@@ -54,16 +54,18 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+          chmod 644 ~/.ssh/known_hosts
+
+      - name: Verify SSH auth
+        run: |
+          ssh -i ~/.ssh/id_rsa -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "echo SSH_OK"
 
       - name: Copy files to droplet
         run: |
-          scp -r -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no \
+          scp -r -i ~/.ssh/id_rsa -o BatchMode=yes -o StrictHostKeyChecking=yes \
             build-assets/* \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/profile.shmdhussain.com/html/"
-
-      - name: Cleanup SSH key
-        if: always()
-        run: rm -f ~/.ssh/id_rsa
