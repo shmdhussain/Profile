@@ -54,13 +54,15 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          printf '%s\n' "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/deploy_key
           chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Copy files to droplet
         run: |
-          scp -r -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no \
+          scp -r -i ~/.ssh/deploy_key \
+            -o StrictHostKeyChecking=no \
+            -o IdentitiesOnly=yes \
             build-assets/* \
             "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/profile.shmdhussain.com/html/"
 
