@@ -3,7 +3,7 @@ name: Build & Deploy to Droplet
 on:
   push:
     branches:
-      - master            # change to your target branch(es)
+      - master # change to your target branch(es)
 
 jobs:
   build:
@@ -17,8 +17,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-          cache: 'npm'   # or 'yarn' / 'pnpm'
+          node-version: "20"
+          cache: "npm" # or 'yarn' / 'pnpm'
       - name: Install deps
         run: npm ci
       - name: Build
@@ -55,10 +55,10 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
           eval "$(ssh-agent -s)"
-          ssh-add ~/.ssh/id_ed25519
+          ssh-add ~/.ssh/id_rsa
           ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Install rsync (if missing)
