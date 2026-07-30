@@ -45,3 +45,9 @@ latest.dump
 
 #ignore css file gen from scss file
 #css/**/*.css
+
+# SSH deploy keys / secrets
+deploy_key
+deploy_key.pub
+*.pem
+id_rsa*

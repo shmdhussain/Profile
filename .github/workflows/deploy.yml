@@ -50,23 +50,20 @@ jobs:
           name: build-assets
           path: build-assets
 
-      - name: Setup SSH
-        shell: bash
+      - name: Setup SSH key
         run: |
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          eval "$(ssh-agent -s)"
-          ssh-add ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
-
-      - name: Install rsync (if missing)
-        run: |
-          sudo apt-get update -y
-          sudo apt-get install -y rsync
 
       - name: Rsync files to droplet
         run: |
-          rsync -az  build-assets/ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/profile.shmdhussain.com/html/"
-          # Example: if you want the *contents* of build-assets in DEPLOY_PATH, ensure DEPLOY_PATH exists on the droplet.
+          rsync -az -e "ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no" \
+            build-assets/ \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/profile.shmdhussain.com/html/"
+
+      - name: Cleanup SSH key
+        if: always()
+        run: rm -f ~/.ssh/deploy_key
